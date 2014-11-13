@@ -16,6 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails', '~> 4.0.0.beta2'
 gem 'bootstrap-sass'
+gem 'font-awesome-sass'
 
 # Views
 gem 'slim'
