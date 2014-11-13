@@ -6,7 +6,6 @@ gem 'rails', '4.2.0.beta4'
 gem 'pg'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'bcrypt', '~> 3.1.7'
 
 # Assets
 gem 'sass-rails', '~> 5.0.0.beta1'
@@ -18,6 +17,9 @@ gem 'font-awesome-sass'
 
 # Views
 gem 'slim'
+
+# Models
+gem 'bcrypt', '~> 3.1.7'
 
 # Heroku
 gem 'rails_12factor', group: :production
