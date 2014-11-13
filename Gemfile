@@ -8,8 +8,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'bcrypt', '~> 3.1.7'
 
-gem 'sdoc', '~> 0.4.0', group: :doc
-
 # Assets
 gem 'sass-rails', '~> 5.0.0.beta1'
 gem 'uglifier', '>= 1.3.0'
@@ -25,9 +23,11 @@ gem 'slim'
 gem 'rails_12factor', group: :production
 
 group :development, :test do
+  gem 'spring'
+
+  # Debugging
   gem 'byebug'
   gem 'web-console', '~> 2.0.0.beta4'
-  gem 'spring'
   gem 'quiet_assets'
   gem 'pry-rails'
 end
