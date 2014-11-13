@@ -1,0 +1,13 @@
+h3 Sign In
+= form_for @user, url: sessions_path do |f|
+  p
+    = f.label :email
+    br
+    = f.text_field :email
+  p
+    = f.label :password
+    br
+    = f.password_field :password
+
+  = f.submit 'Sign In', class: 'btn btn-default'
+  span.login Don't have an account? #{ link_to 'Sign up!', sign_up_path }.
