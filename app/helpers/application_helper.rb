@@ -9,4 +9,16 @@ module ApplicationHelper
       content_tag :p, message, id: 'flash', class: ['alert', alert_type].join(' ')
     end.join.html_safe
   end
+
+  def title_placeholder
+    if current_user.notes.any? &:persisted?
+      'Title Your Note'
+    else
+      'Title Your First Note'
+    end
+  end
+
+  def title_autofocus?(note)
+    note.new_record?
+  end
 end

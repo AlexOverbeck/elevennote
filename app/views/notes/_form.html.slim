@@ -1,8 +1,11 @@
 = form_for @note do |f|
   p
-    = f.text_field :title, placeholder: "Note Title"
+    = f.text_field :title, placeholder: title_placeholder, autofocus: title_autofocus?(f.object)
   p
-    = f.text_area :body_html, placeholder: "Your Note"
+    = f.bootsy_area :body_html, placeholder: "Your Note", editor_options: {image: false, html: true}
 
   .form-actions
     = f.submit class: 'btn btn-default'
+    - unless @note.new_record?
+      = link_to note_path(@note), method: :delete, data: { confirm: 'Are you sure?' } do
+        i.fa.fa-trash-o

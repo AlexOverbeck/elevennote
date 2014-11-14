@@ -4,7 +4,6 @@ ruby '2.1.4'
 # App Core
 gem 'rails', '4.2.0.beta4'
 gem 'pg'
-gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 # Assets
@@ -17,6 +16,7 @@ gem 'font-awesome-sass'
 
 # Views
 gem 'slim'
+gem 'bootsy'
 
 # Models
 gem 'bcrypt', '~> 3.1.7'
