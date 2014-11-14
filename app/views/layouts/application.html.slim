@@ -14,18 +14,17 @@ html
               | ElevenNote
               .user-links
                 - if current_user.present?
-                  | Signed in as #{ current_user.display_name }.
+                  ' Signed in as #{ current_user.display_name }.
                   = link_to 'Logout', logout_path, method: :delete
                 - else
-                  = link_to 'Sign Up', sign_up_path
-                  '
+                  =' link_to 'Sign Up', sign_up_path
                   ' or
                   = link_to 'Login', login_path
       .container
         .row
           .col-xs-4
             nav#sidebar
-              .well SIDEBAR
+              = render 'notes/list'
           .col-xs-8
             main
               = flash_messages
