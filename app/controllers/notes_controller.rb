@@ -8,11 +8,11 @@ class NotesController < ApplicationController
   end
 
   def new
-    @note = Note.new
+    @note = current_user.notes.new
   end
 
   def create
-    @note = Note.new note_params
+    @note = current_user.notes.new note_params
     set_flash_for @note.save(note_params)
     render_or_redirect
   end
@@ -51,6 +51,6 @@ class NotesController < ApplicationController
   end
 
   def load_notes
-    @notes = Note.all
+    @notes = current_user.notes.all if current_user
   end
 end
